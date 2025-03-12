@@ -1,0 +1,17 @@
+@import "tailwindcss";
+/*  */
+@theme {
+    --color-almost-white: #fafafa;
+    --color-medium-gray: #696969;
+    --color-almost-black: #141414;
+}
+#Modal-window{
+    transform: translateX(100%);
+}
+#btn1:hover .arrow{
+    color: black;
+   
+}
+#btn2:hover .arrow{
+    color: black;
+}

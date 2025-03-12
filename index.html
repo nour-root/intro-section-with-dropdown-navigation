@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/style.css" />
+    <title>Vite App</title>
+  </head>
+  <body>
+    <!-- nav for mobile screen -->
+    <nav class="p-6 flex justify-between items-center sm:hidden">
+      <img src="/assets/images/logo.svg" alt="" />
+      <button
+        type="button"
+        class="cursor-pointer"
+        onclick="ShowModal('Modal-window')"
+      >
+        <img src="/assets/images/icon-menu.svg" width="35" height="35" alt="" />
+      </button>
+    </nav>
+    <!-- nav for desktop screen -->
+    <nav class="p-6 flex justify-between items-center max-sm:hidden">
+      <div class="flex items-center space-x-12">
+        <img src="/assets/images/logo.svg" alt="" />
+        <div>
+          <ul class="flex items-center space-x-6 text-medium-gray">
+            <li
+              id="btn1"
+              onclick="drop1('btnDown1')"
+              class="relative space-y-2 cursor-pointer"
+            >
+              <div>
+                <span class="img-btn1">Features</span>
+                <button
+                  id="btnDown1"
+                  class="cursor-pointer transform transition-transform duration-150 ml-2"
+                >
+                  <svg
+                    class="arrow -mb-1"
+                    height="10"
+                    width="10"
+                    viewBox="0 0 630 700"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M622 106L311 417L0 106l65-65l246 245L556 41z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <ul
+                id="list1"
+                class="absolute mt-1 bg-almost-white p-3 w-[140px] hidden -ml-15 space-y-1 rounded-xl shadow-lg"
+              >
+                <li class="p-1 flex items-center hover:bg-gray-100 space-x-2">
+                  <img src="/assets/images/icon-todo.svg" alt="" />
+                  <span> Todo List </span>
+                </li>
+                <li class="p-1 flex items-center hover:bg-gray-100 space-x-2">
+                  <img src="/assets/images/icon-calendar.svg" alt="" />
+                  <span>Calendar</span>
+                </li>
+                <li class="p-1 flex items-center hover:bg-gray-100 space-x-2">
+                  <img src="/assets/images/icon-reminders.svg" alt="" />
+                  <span>Reminders</span>
+                </li>
+                <li class="p-1 flex items-center hover:bg-gray-100 space-x-2">
+                  <img src="/assets/images/icon-planning.svg" alt="" />
+                  <span>Planning</span>
+                </li>
+              </ul>
+            </li>
+            <li
+              id="btn2"
+              onclick="drop2('btnDown2')"
+              class="cursor-pointer space-y-2 hover:text-black"
+            >
+              <div>
+                <span>Company</span>
+                <button
+                  id="btnDown2"
+                  class="cursor-pointer transform transition-transform duration-150 ml-2"
+                >
+                  <svg
+                    class="arrow -mb-1"
+                    height="10"
+                    width="10"
+                    viewBox="0 0 630 700"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M622 106L311 417L0 106l65-65l246 245L556 41z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <ul
+                id="list2"
+                class="absolute bg-almost-white text-medium-gray w-[110px] p-2 rounded hidden mt-2 -ml-5 shadow-lg space-y-1"
+              >
+                <li class="p-1 hover:bg-gray-100">History</li>
+                <li class="p-1 hover:bg-gray-100">Our Time</li>
+                <li class="p-1 hover:bg-gray-100">Blog</li>
+              </ul>
+            </li>
+            <li class="cursor-pointer hover:text-almost-black">Careers</li>
+            <li class="cursor-pointer hover:text-almost-black">About</li>
+          </ul>
+        </div>
+      </div>
+      <div class="flex space-x-10">
+        <button
+          type="button"
+          class="cursor-pointer text-medium-gray hover:text-almost-black"
+        >
+          Login
+        </button>
+        <button
+          type="button"
+          class="border-2 cursor-pointer text-medium-gray border-medium-gray hover:text-almost-black hover:border-almost-black rounded-xl py-2 px-5 w-full"
+        >
+          Register
+        </button>
+      </div>
+    </nav>
+    <!-- main intro -->
+    <main class="flex sm:mt-20 flex-col space-y-5 h-dvh">
+      <img
+        class="md:hidden"
+        src="/assets/images/image-hero-mobile.png"
+        alt=""
+      />
+      <!-- start mobile screen -->
+      <div class="flex flex-col space-y-12 sm:hidden">
+        <div class="flex flex-col items-center space-y-6">
+          <h1 class="text-4xl font-bold">Make remote work</h1>
+          <p class="text-medium-gray font-semibold text-center w-[310px]">
+            Get your team in sync, no matter your location, Streamline
+            processes, create team rituals, And watch productivity soar.
+          </p>
+          <button
+            type="button"
+            class="text-white bg-almost-black border hover:bg-almost-white hover:text-almost-black font-semibold py-3 px-5 rounded-xl"
+          >
+            Learn more
+          </button>
+        </div>
+        <div class="flex justify-evenly items-center">
+          <img src="/assets/images/client-databiz.svg" width="80" alt="" />
+          <img src="/assets/images/client-audiophile.svg" width="55" alt="" />
+          <img src="/assets/images/client-meet.svg" width="70" alt="" />
+          <img src="/assets/images/client-maker.svg" width="75" alt="" />
+        </div>
+      </div>
+      <!-- end mobile screen -->
+      <!-- start desktop screen  -->
+      <div class="max-sm:hidden sm:flex sm:justify-around sm:h-[75%]">
+        <div class="flex flex-col justify-between">
+          <div class="flex flex-col space-y-7">
+            <h1 class="text-8xl font-bold w-[590px]">Make remote work</h1>
+            <p class="text-medium-gray font-semibold w-[370px]">
+              Get your team in sync, no matter your location, Streamline
+              processes, create team rituals, And watch productivity soar.
+            </p>
+            <button
+              type="button"
+              class="text-white bg-almost-black cursor-pointer border hover:bg-almost-white hover:text-almost-black font-semibold w-fit py-3 px-5 rounded-xl"
+            >
+              Learn more
+            </button>
+          </div>
+          <div class="flex items-center gap-22">
+            <img src="/assets/images/client-databiz.svg" width="90" alt="" />
+            <img src="/assets/images/client-audiophile.svg" width="65" alt="" />
+            <img src="/assets/images/client-meet.svg" width="80" alt="" />
+            <img src="/assets/images/client-maker.svg" width="85" alt="" />
+          </div>
+        </div>
+        <img
+          class="max-sm:hidden sm:w-[440px]"
+          src="/assets/images/image-hero-desktop.png"
+          alt=""
+        />
+      </div>
+      <!-- End desktop screen -->
+      <!-- Modal window -->
+      <div
+        id="Modal-window"
+        class="absolute sm:hidden flex flex-col space-y-14 p-5 z-20 w-2/3 h-full top-0 right-0 bg-almost-white"
+      >
+        <button
+          type="button"
+          class="close cursor-pointer"
+          onclick="HidModal('Modal-window')"
+        >
+          <img
+            class="absolute right-8 top-6"
+            src="/assets/images/icon-close-menu.svg"
+            alt=""
+            width="25"
+          />
+        </button>
+        <div class="flex flex-col text-medium-gray space-y-8">
+          <ul class="space-y-5">
+            <li
+              id="btn1"
+              onclick="drop1('btnDown1_m')"
+              class="relative space-y-2 cursor-pointer"
+            >
+              <div class="flex items-center space-x-2">
+                <span class="-mt-[5px]">Features</span>
+                <button
+                  id="btnDown1_m"
+                  class="cursor-pointer transform transition-transform duration-150"
+                >
+                  <img
+                    class=""
+                    src="/assets/images/icon-arrow-down.svg"
+                    alt=""
+                  />
+                </button>
+              </div>
+              <ul
+                id="list1_m"
+                class="bg-almost-white w-1/2 hidden ml-7 space-y-1 rounded"
+              >
+                <li class="p-1 flex items-center hover:bg-gray-100 space-x-2">
+                  <img src="/assets/images/icon-todo.svg" alt="" />
+                  <span> Todo List </span>
+                </li>
+                <li class="p-1 flex items-center hover:bg-gray-100 space-x-2">
+                  <img src="/assets/images/icon-calendar.svg" alt="" />
+                  <span>Calendar</span>
+                </li>
+                <li class="p-1 flex items-center hover:bg-gray-100 space-x-2">
+                  <img src="/assets/images/icon-reminders.svg" alt="" />
+                  <span>Reminders</span>
+                </li>
+                <li class="p-1 flex items-center hover:bg-gray-100 space-x-2">
+                  <img src="/assets/images/icon-planning.svg" alt="" />
+                  <span>Planning</span>
+                </li>
+              </ul>
+            </li>
+            <li
+              id="btn2"
+              onclick="drop2('btnDown2_m')"
+              class="cursor-pointer space-y-2"
+            >
+              <div class="flex space-x-2 items-center">
+                <span class="-mt-[5px]">Company</span>
+                <button
+                  id="btnDown2_m"
+                  class="cursor-pointer transform transition-transform duration-150"
+                >
+                  <img
+                    class=""
+                    src="/assets/images/icon-arrow-down.svg"
+                    alt=""
+                  />
+                </button>
+              </div>
+              <ul
+                id="list2_m"
+                class="bg-almost-white w-1/2 rounded hidden ml-7 space-y-1"
+              >
+                <li class="p-1 hover:bg-gray-100">History</li>
+                <li class="p-1 hover:bg-gray-100">Our Time</li>
+                <li class="p-1 hover:bg-gray-100">Blog</li>
+              </ul>
+            </li>
+            <li class="cursor-pointer">Careers</li>
+            <li class="cursor-pointer">About</li>
+          </ul>
+          <div class="flex flex-col items-center space-y-3">
+            <button type="button" class="cursor-pointer">Login</button>
+            <button
+              type="button"
+              class="border-2 cursor-pointer border-medium-gray rounded-xl py-2 w-full"
+            >
+              Register
+            </button>
+          </div>
+        </div>
+      </div>
+      <div
+        id="overlay"
+        class="absolute hidden w-full h-full bg-[#1414144d] top-0"
+      ></div>
+    </main>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
