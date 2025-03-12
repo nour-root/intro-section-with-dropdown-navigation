@@ -5,9 +5,9 @@
     --color-medium-gray: #696969;
     --color-almost-black: #141414;
 }
-#Modal-window{
-    transform: translateX(100%);
-}
+/* #Modal-window{
+    transform: scaleX(0);
+} */
 #btn1:hover .arrow{
     color: black;
    

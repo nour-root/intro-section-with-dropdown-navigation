@@ -1,12 +1,12 @@
 let ShowModal = (id) => {
-  document.getElementById(id).style.transition = "all .3s";
-  document.getElementById(id).style.transform = "translateX(0)";
+  document.getElementById(id).style.transform = "translateX(0px)";
+  // document.getElementById(id).style.transform = "scale(1)";
   document.body.style.position = "fixed";
   document.getElementById("overlay").classList.remove("hidden");
 };
 let HidModal = (id) => {
-  document.getElementById(id).style.transition = "all .3s";
   document.getElementById(id).style.transform = "translateX(100%)";
+  // document.getElementById(id).style.transform = "scale(0)";
   document.body.style.position = "";
   document.getElementById("overlay").classList.add("hidden");
 };
